@@ -2,6 +2,7 @@
 enum Token {
     Identifier(String),
     Number(f64),
+    Name(String),
     Operator(char),
     Punctuation(char),
     Keyword(String),
@@ -13,7 +14,8 @@ impl Token {
         matches!(self, 
             Token::Number(_) | 
             Token::Identifier(_) | 
-            Token::Keyword(_)
+            Token::Keyword(_)|
+            Token::Name(_)
         )
     }
 
@@ -29,6 +31,7 @@ impl Token {
 fn main() {
     let tokens = vec![
         Token::Keyword("fn".to_string()),
+   //     Token::Keyword("fn".to_string()),
         Token::Identifier("main".to_string()),
         Token::Punctuation('('),
         Token::Punctuation(')'),
