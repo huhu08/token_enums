@@ -1,4 +1,5 @@
 #[derive(Debug, Clone, PartialEq)]
+#[allow(dead_code)]
 enum Token {
     Identifier(String),
     Number(f64),
@@ -8,7 +9,7 @@ enum Token {
     Keyword(String),
     EOF,
 }
-
+#[allow(dead_code)]
 impl Token {
     fn is_value(&self) -> bool {
         matches!(self, 
@@ -41,4 +42,5 @@ fn main() {
     for token in tokens {
         println!("{:?} → is_value? {}", token, token.is_value());
     }
+    
 }
