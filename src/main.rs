@@ -3,7 +3,7 @@
 enum Token {
     Identifier(String),
     Number(f64),
-    Name(String),
+  //  Name(String),
     Operator(char),
     Punctuation(char),
     Keyword(String),
