@@ -16,7 +16,7 @@ impl Token {
             Token::Number(_) | 
             Token::Identifier(_) | 
             Token::Keyword(_)|
-            Token::Name(_)
+           // Token::Name(_)
         )
     }
 
